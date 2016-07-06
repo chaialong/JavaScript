@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script>
+        function hypotenuse(a,b){
+            function square(x) {return x*x;}
+
+            return Math.sqrt(square(a) + square(b));
+        }
+
+        function secondFunction(){
+            var result;
+            result = hypotenuse(1,2);
+            document.write(result);
+        }
+
+
+    </script>
+</head>
+<body>
+      <input type="button" value="click" onclick="secondFunction();"/>
+</body>
+</html>

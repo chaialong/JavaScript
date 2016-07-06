@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script type="text/javascript" src="jquery.min.js" ></script>
+    <script>
+            function concatenate(first,second){
+                var full;
+
+                full = first + second;
+                return full;
+            }
+
+            function secondFunction(){
+                var result;
+                result = concatenate('Zara', 'Ali');
+                document.write(result);
+            }
+
+            function say667() {
+               var num = 666;
+               say = function() { console.log(num); };
+               num++;
+               return say;
+            }
+            var sayNumber = say667();
+            sayNumber();
+    </script>
+</head>
+<body>
+        <a id="myDiv">Hello world</a>
+        <input type="button" value="Concatenate" onclick="sayNumber();"/>
+</body>
+</html>

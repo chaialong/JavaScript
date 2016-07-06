@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+    <script>
+    function book(title, price){
+        this.title = title;
+        this.price = price;
+    }
+    var newBook = new book("perl",200);
+    document.write(JSON.stringify(newBook));
+    document.write("<br />");
+
+    var flag = new Boolean(false);
+    document.write(flag.prototype);
+    document.write("<br />");
+    document.write(book.prototype);
+    document.write("newBook.toString() is : " + flag.toString());
+    document.write("<br />");
+    document.write("newBook.valueOf() is : " + flag.valueOf());
+    </script>
+</body>
+</html>

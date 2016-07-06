@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<form method="post" action="http://10.20.234.132:8080/form">
+    <p>
+        <label for="price">
+            Price:<input type="number" step="1" min="0" max="100" value="1" id="price" name="price"/>
+        </label>
+    </p>
+
+    <p>
+        <label>
+            Favorite: <select name="favi" id="favi" size="5" multiple>
+            <optgroup label="First">
+                <option value="apples" selected label="Apples">Apples</option>
+                <option value="oranges" label="Oranges">Oranges</option>
+            </optgroup>
+            <optgroup label="Second">
+                <option value="cherries" label="Cherries">Cherries</option>
+                <option value="pears" label="Pears">Pears</option>
+            </optgroup>
+        </select>
+        </label>
+    </p>
+    <textarea rows="10" cols="20" name="text" id="text" wrap="soft">Tell us why this is your favorite fruit
+    </textarea>
+    <button autofocus type="submit">Submit</button>
+</form>
+
+</body>
+</html>

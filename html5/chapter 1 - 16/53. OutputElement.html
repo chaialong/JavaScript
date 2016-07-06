@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<form action="http://10.20.234.132:8080/form" method="post"
+     onsubmit="return false"  oninput="res.value = quant.valueAsNumber * price.valueAsNumber">
+    <p>
+        <legend>Value calculator:</legend>
+        <input type="number" id="quant" placeholder="Quantity" name="quant"/> *
+        <input type="number" id="price" placeholder="Price" name="price"/> =
+        <output name="res"/>
+    </p>
+    <button type="submit">Submit</button>
+</form>
+</body>
+</html>

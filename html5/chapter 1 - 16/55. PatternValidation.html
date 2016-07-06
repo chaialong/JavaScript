@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<form action="http://10.20.234.132:8080/form" method="post">
+    <p>
+        <label for="name">
+            Name:
+            <input type="text"  id="name" name="name" pattern="^.* .*$"/>
+        </label>
+    </p>
+    <p>
+        <label for="password">
+            Password:
+            <input type="password" min="0" max="10" id="password" name="password"/>
+        </label>
+    </p>
+    <p>
+        <label>
+            Email:
+            <input type="email" placeholder="test@mydomain.com" name="email" id="email"
+                    pattern=".*@mydomain.com$"/>
+        </label>
+    </p>
+    Here is a common form for representing the three activities in a triathlon.
+    <p>
+        <img src="triathlon.png" alt="Triathlon Image" width="200" height="67"/>
+    </p>
+    The first icon represents swimming, the second represents cycling and the third
+    represents running.
+    <button type="submit">Submit</button>
+    <button type="submit" formnovalidate>Save</button>
+</form>
+</body>
+</html>

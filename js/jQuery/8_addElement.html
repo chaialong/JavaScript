@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="jquery.min.js"></script>
+    <script>
+        var counter = 1;
+        $(function(){
+            $("#button1").click(function(){
+                var date = new Date();
+                $("#p1").append('<br>'+'Counter '+(counter++)+' : '+date);
+            })
+            $("#button2").click(function(){
+                var date = new Date();
+                $("#p1").prepend('<br>'+'Counter '+(counter++)+' : '+date);
+            })
+        });
+        function appendText(){
+            var txt1='<p>Text.</p>';
+            var txt2=$('<p></p>').text('New text.');
+            var txt3=document.createElement('p');
+            txt3.innerHTML="Text.";
+            $("p").append(txt1,txt2,txt3);
+        }
+        function afterText(){
+            var div = "<div>c</div>";
+            $(".a").after(div);
+        }
+        function appendText(){
+            var div = "<div>c</div>";
+            $(".a").append(div);
+        }
+    </script>
+</head>
+<body>
+    <p id="p1"></p>
+    <button id="button1">Append current time</button>
+    <button id="button2">prepend current time</button>
+    <button id="button3" onclick="appendText();">Append multiple lines</button>
+    <div class="a">
+        <div class="b">b</div>
+    </div>
+    <button id="button4" onclick="afterText();">After button</button>
+    <button id="button5" onclick="appendText();">Append button</button>
+</body>
+</html>

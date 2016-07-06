@@ -1,0 +1,24 @@
+<!DOCTYPE THML>
+<html>
+	<head>
+		<title>Add method to object</title>
+	</head>
+	<body>
+		<script>
+			var myObj = {
+				name: "Adam",
+				weather: "sunny",
+				printMessage: function() {
+					document.writeln("Hello " + this.name + ". ");
+					document.writeln("Today is " + this.weather + ".");
+				}
+			};
+		
+			myObj.printMessage();
+			<!-- document.writeln("hello " + myObj.name + "."); -->
+			<!-- document.write("<br/>") -->
+			<!-- document.writeln("Today is " + myObj.weather + "."); -->
+		</script>
+	
+	</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script>
+        function getConfirmation(){
+            var retVal = confirm("Do you want to continue?");
+            if(retVal == true){
+                document.write("User wants to continue!");
+                return true;
+            }else{
+               document.write("User does not want to continue!");
+                return false;
+            }
+        }
+
+        function getValue(){
+            var retVal = prompt("Enter your name: ", "your name here");
+
+            document.write("You have entered: " + retVal);
+        }
+    </script>
+</head>
+<body>
+      <input type="button" value="click me" onclick="getConfirmation();">
+      <input type="button" value="get value" onclick="getValue();">
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script>
+    var imgObj=null;
+    var animate;
+    function init(){
+        imgObj=document.getElementById('myImage');
+        imgObj.style.position='relative';
+        imgObj.style.left='0px';
+    }
+    function moveRight(){
+        imgObj.style.left=parseInt(imgObj.style.left)+10+'px';
+        animate=setTimeout(moveRight,2);
+    }
+    function stop(){
+        clearTimeout(animate);
+        imgObj.style.left='0px';
+    }
+    window.onload=init;
+
+    if(document.images){
+        var image1 = new Image();
+        image1.src="../image/refresh.gif";
+        var image2 = new Image();
+        image2.src="../image/Restore.gif";
+    }
+</script>
+<form>
+    <p>Click button below to move the image to right</p>
+    <input type="button" value="Start" onclick="moveRight();"/>
+    <input type="button" value="Stop" onclick="stop();"/>
+    <img id="myImage" name="myImage" src="../image/triathlon.png" />
+    <a href="#" onMouseOver="document.myImage.src=image1.src;"
+                onMouseOut="document.myImage.src=image2.src;">hi...
+    </a>
+</form>
+</body>
+</html>

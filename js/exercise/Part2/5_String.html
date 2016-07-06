@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<script>
+        function newline(){
+             document.write("<br/>");
+        }
+
+        function reverse(){
+             var str = document.getElementById("input").value;
+             var splitted = str.split(" ");
+             for (var i = splitted.length -1; i >=0; i--){
+               document.write(splitted[i] + " ");
+             }
+
+             return false;
+        }
+</script>
+<!--<script>-->
+         <!--var str = new String("this is a string");-->
+         <!--String.prototype.print = function(text){-->
+            <!--document.write(text);-->
+            <!--document.write("<br/>")-->
+         <!--}-->
+         <!--str.print("what??");-->
+         <!--document.write(str.length);-->
+         <!--document.write("<br />");-->
+         <!--var index = str.localeCompare("xyz");-->
+         <!--document.write(index);-->
+         <!--document.write("<br />");-->
+         <!--var index = str.localeCompare("abc");-->
+         <!--document.write(index);-->
+         <!--document.write("<br />");-->
+         <!--var index = str.localeCompare("this is a string");-->
+         <!--document.write(index);-->
+         <!--document.write("<br />");-->
+         <!--var re = /((\d)*is)/i;-->
+         <!--document.write(str.match(re));-->
+         <!--document.write("<br/>");-->
+
+         <!--var str = "For more information, see Chapter 3.4.5.1";-->
+         <!--var re = /(Chapter \d+(\.\d)*)/i;-->
+         <!--var found = str.match(re);-->
+         <!--document.write(found);-->
+
+         <!--document.write("<br />")-->
+         <!--var re = /(\w+)\s(\w+)/;-->
+         <!--var str = "chai along";-->
+         <!--var newstr = str.replace(re, "$2, $1");-->
+         <!--document.write(newstr);-->
+         <!--newline();-->
+
+         <!--var re = /along/ig-->
+         <!--document.write(str.search(re));-->
+         <!--newline();-->
+
+         <!--var str = "Apples are round, and apples are juicy.";-->
+         <!--var sliced = str.slice(3, -2);-->
+         <!--document.write(sliced);-->
+         <!--newline();-->
+
+
+     <!--</script>-->
+    <script>
+        var str = "Apples are round, and apples are juicy.";
+        document.write("str.substr(2,10) : " + str.substr(2,10));
+        document.write("<br />");
+        document.write("str.substring(2,10) : " + str.substring(2,10));
+        document.write("<br />");
+        document.write("str.toLocaleLowerCase() : " + str.toLocaleLowerCase());
+        document.write("<br />");
+        document.write("str.toLocaleUpperCase() : " + str.toLocaleUpperCase());
+        document.write("<br />");
+        document.write("str.toLowerCase() : " + str.toLowerCase());
+        document.write("<br />");
+        document.write("str.toUpperCase() : " + str.toUpperCase());
+    </script>
+<body>
+    <form onsubmit="return reverse();">
+        <input type="text" id="input"/>
+    </form>
+    <blink>hello world</blink><br/>
+    <big>hello world</big><br/>
+    <font size="5px">hello world</font><br/>
+    <script>
+        var str = new String("oh world");
+        document.write(str.anchor("myanchor"));
+        document.write('<br/>');
+        document.write(str.fixed());
+        document.write('<br/>');
+        document.write(str.blink());
+        document.write('<br/>');
+        document.write(str.fontcolor("red"));
+        document.write('<br/>');
+        document.write(str.fontsize("5px"));
+        document.write('<br/>');
+        document.write(str.italics());
+        document.write('<br/>');
+        document.write(str.link("http://www.baidu.com"));
+        document.write('<br/>');
+        document.write(str.strike());
+        document.write('<br/>');
+        document.write(str.sub());
+        document.write('<br/>');
+        document.write(str.sup());
+        document.write('<br/>');
+
+    </script>
+</body>
+</html>

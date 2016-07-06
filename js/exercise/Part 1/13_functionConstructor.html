@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script>
+        var func = new Function("x","y", "return x*y;");
+
+    </script>
+</head>
+<body>
+<form onsubmit="return false"  oninput="result.value = func(id1.valueAsNumber,id2.valueAsNumber)">
+       <input name="id1" type="number"/> * <input name="id2" type="number"/>
+       = <input type="text" name="result"/>
+</form>
+</body>
+</html>

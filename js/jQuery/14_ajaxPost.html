@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="jquery.min.js"></script>
+    <script>
+        $(function(){
+            $("#button1").click(function(){
+                $.post("http://localhost:8080/form",
+                {
+                    name:"Chai Along",
+                    city:"Tianjin"
+                },
+                function(data,status){
+                    $("#div1").append(data);
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+    <input type="button" id="button1" value="ajax post"/>
+    <div id="div1"></div>
+</body>
+</html>

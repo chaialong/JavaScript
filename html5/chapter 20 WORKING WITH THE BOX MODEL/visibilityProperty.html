@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="./js/jquery.min.js"></script>
+    <script>
+        $(function(){
+            var buttons = $("button");
+            for(var i = 0; i < buttons.length; i++){
+                buttons[i].onclick = function(e){
+                    if(e.target.innerHTML=="Visible"){
+                         $("#firstchoice").css("display","table-row");
+                    }
+                     $("#firstchoice").css("visibility",e.target.innerHTML);
+                     if(e.target.innerHTML == "Collapse") {
+                            $("#firstchoice").css("display","none");
+                     }
+                }
+            }
+        });
+    </script>
+    <style>
+        tr > th {
+            text-align: left;
+            background: gray;
+            color: white;
+        }
+        tr > th:only-of-type {
+            text-align: right;
+            background: lightgray;
+            color: gray;
+        }
+    </style>
+</head>
+<body>
+<table>
+    <tr>
+        <th>Rank</th><th>Name</th><th>Color</th><th>Size</th>
+    </tr>
+    <tr id="firstchoice">
+        <th>Favorite:</th><td>Apples</td><td>Green</td><td>Medium</td>
+    </tr>
+    <tr>
+        <th>2nd Favorite:</th><td>Oranges</td><td>Orange</td><td>Large</td>
+    </tr>
+</table>
+<p>
+    <button>Visible</button>
+    <button>Collapse</button>
+    <button>Hidden</button>
+</p>
+</body>
+</html>

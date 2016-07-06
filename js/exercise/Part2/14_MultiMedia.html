@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<table border="1">
+    <tr><th>Plug-in Name</th><th>Filename</th><th>Description</th></tr>
+    <script LANGUAGE="JavaScript" type="text/javascript">
+for (i=0; i<navigator.plugins.length; i++) {
+document.write("<tr><td>");
+document.write(navigator.plugins[i].name);
+document.write("</td><td>");
+document.write(navigator.plugins[i].filename);
+document.write("</td><td>");
+document.write(navigator.plugins[i].description);
+document.write("</td></tr>");
+}
+
+
+</script>
+</table>
+<script>
+     function play()
+{
+if (!document.demo.IsPlaying()){
+document.demo.Play();
+}
+}
+function stop()
+{
+if (document.demo.IsPlaying()){
+document.demo.StopPlay();
+}
+}
+function rewind(){
+if (document.demo.IsPlaying()){
+document.demo.StopPlay();
+}
+document.demo.Rewind();
+}
+</script>
+<video id="demo" name="demo"
+       
+       width="318" height="300" play="false" loop="false"
+       controls="controls"
+       ><source src="../video/Definition part1.mp4">
+</video>
+<form name="form" id="form" action="#" method="get">
+    <input type="button" value="Start" onclick="play();" />
+    <input type="button" value="Stop" onclick="stop();" />
+    <input type="button" value="Rewind" onclick="rewind();" />
+</form>
+</body>
+</html>

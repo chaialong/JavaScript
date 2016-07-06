@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script type="text/javascript" src="jquery.min.js"></script>
+    <script>
+        function WriteToDiv(content){
+              var div = document.getElementById("output");
+              div.innerHTML = div.innerHTML + "<br />" + content;
+        }
+        function SetCookie(content){
+             document.cookie=content;
+        }
+        function WriteCookie(){
+            if(document.myform.customer.value == ""){
+                alert("Enter some value!");
+                return;
+            }
+            var now = new Date();
+            now.setMonth(now.getMonth() + 1);
+            cookievalue = escape(document.myform.customer.value) + ";";
+            SetCookie("name=" + cookievalue);
+            SetCookie("key1=along;Expires="+now.toGMTString()+";");
+            SetCookie("Key2=chai");
+            WriteToDiv(cookievalue);
+        }
+        function GetCookie(){
+            var allcookies = document.cookie;
+            WriteToDiv(allcookies);
+            cookiearray = allcookies.split(';');
+
+            for(var i = 0; i < cookiearray.length; i++){
+                name=cookiearray[i].split('=')[0];
+                value=cookiearray[i].split('=')[1];
+                WriteToDiv("Key is: " + name + " and Value is : " + value);
+            }
+        }
+        function SetExpiryDate(){
+            var now = new Date();
+            now.setMonth(now.getMonth() + 1);
+
+            cookievalue = escape(document.myform.customer.value);
+            document.cookie="test="+cookievalue+";expires="+now.toGMTString()+";";
+            document.cookie='expires='+now.toUTCString()+';expires='+now.toUTCString()+';';
+            GetCookie();
+        }
+
+
+        function setnull(){
+            document.getElementById("output").innerHTML = "";
+        }
+
+    </script>
+</head>
+<body>
+<form name="myform" action="">
+    Enter name: <input type="text" name="customer"/>
+    <input type="button" value="set cookie" onclick="WriteCookie();"/>
+    <input type="button" value="get cookie" onclick="GetCookie();"/>
+    <input type="button" value="set expiry" onclick="SetExpiryDate();"/>
+    <input type="button" value="set null" onclick="setnull();"/>
+    <p id="output">test</p>
+</form>
+</body>
+</html>

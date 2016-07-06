@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script>
+        function over() {
+            console.log("over");
+        }
+        function out() {
+            console.log("out");
+        }
+    </script>
+    <style>
+        h2::first-letter {
+            background-color:red
+        }
+
+    </style>
+    <script>
+        document.cookie="key1=value;key2=value2;";
+    </script>
+</head>
+<body>
+      <div onmouseover="over();" onmouseout="out();">
+            <h2><span style="background-color:red;">Th</span>is is inside the division</h2>
+      </div>
+</body>
+</html>

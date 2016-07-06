@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        * {
+           border: thin black  dotted;
+           padding: 4px;
+        }
+        a {
+            border: 2px  green solid;
+            padding: 4px
+        }
+        .class1 {
+            font-size: 30px;
+            color: red;
+        }
+        span.class1.class2 {
+            font-size: 40px;
+            color: yellow;
+        }
+        [href] {
+            color: green;
+        }
+        [class~="class2"] {
+            color: pink;
+        }
+        [lang|="en"] {
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+    <a lang="en-us" href="http://apress.com" class="class2">Visit the Apress website</a>
+    <p lang="en-gb">I like <span class="class1 class2">apples</span> and oranges.</p>
+    <a lang="en" href="http://w3c.org" class="class1">Visit the <span class="class1">W3C</span> website</a>
+</body>
+</html>

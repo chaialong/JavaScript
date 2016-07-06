@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script>
+        function sayHello(name, age)
+        {
+            document.write(name + " is " + age + " years old. ");
+        }
+    </script>
+    <script>
+        function sayHello2(name) {
+    var text = 'Hello ' + name; // Local variable
+    var say = function() { console.log(text); }
+    return say;
+    }
+    var say2 = sayHello2('Bob');
+    say2();
+    document.write(say2.toString());
+    </script>
+    <script>
+        function say667() {
+    // Local variable that ends up within closure
+    var num = 666;
+    var say = function() { console.log(num); }
+    num++;
+    return say;
+}
+var sayNumber = say667();
+sayNumber();
+    </script>
+</head>
+<body>
+</body>
+</html>

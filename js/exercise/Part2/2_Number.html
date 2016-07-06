@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script>
+        function newline(){
+            document.write("<br />");
+        }
+    </script>
+</head>
+<body>
+    <script>
+        document.write(Number.MAX_VALUE);
+        newline();
+        document.write(Number.MIN_VALUE);
+        newline();
+        document.write(Number.NaN);
+        newline();
+        var smallNumber = (-Number.NEGATIVE_INFINITY)*2;
+        document.write(smallNumber);
+        newline();
+        var num = new Number(177.123);
+        document.write(num.constructor);
+        newline();
+        var num1 = 77.12345678;
+        document.write(num1.toExponential(5));
+        newline();
+        document.write(num1.toFixed(5));
+        var num2 = new Number(177.12345);
+        newline();
+        document.write(num2.toLocaleString());
+        newline();
+        document.write("num2.toPrecision() : "+num2.toPrecision());
+        newline();
+        document.write("num2.toPrecision(4) : " +num2.toPrecision(4));
+        newline();
+        document.write("num2.toPrecision(2) : "+num2.toPrecision(2));
+        newline();
+        document.write("num2.toPrecision(1) : "+num2.toPrecision(1));
+        var num = new Number(15);
+        newline();
+        document.write("num.toString() is : " + num.toString());
+        newline();
+        document.write("num.toString(2) is : " + num.toString(2));
+        newline();
+        document.write("num.toString(12) is : " + num.toString(12));
+        newline();
+        document.write("num.valueOf() is : " + num.valueOf());
+
+    </script>
+
+</body>
+</html>

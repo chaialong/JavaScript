@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script>
+    function print(str){
+        document.write('<br>'+str);
+    }
+</script>
+<script>
+           var fruits = new Array('apple','orange','mango');
+           for(var i = 0; i < fruits.length; i++){
+                document.write(fruits[i]);
+                document.write('<br/>');
+           }
+
+
+</script>
+<script>
+    var alpha=['a','b','c'];
+    var number=[1,2,3];
+    document.write(alpha.concat(number));
+</script>
+<script>
+    function logArrayElements(element,index,array){
+        document.write('<br />');
+        document.write(index + ' : ' + element);
+        if(element > this.compareNum){
+            document.write('<br />');
+            document.write(element);
+        }
+    }
+
+    var passed = [13,5,18,9];
+    var compareNum = 10;
+    passed.forEach(logArrayElements);
+</script>
+<script>
+    function copy(obj) {
+  var copy = Object.create(Object.getPrototypeOf(obj));
+  var propNames = Object.getOwnPropertyNames(obj);
+
+  propNames.forEach(function(name) {
+    var desc = Object.getOwnPropertyDescriptor(obj, name);
+    Object.defineProperty(copy, name, desc);
+  });
+
+  return copy;
+}
+
+var obj1 = { a: 1, b: 2 };
+var obj2 = copy(obj1); // obj2 looks like obj1 now
+</script>
+<script>
+    function isBig(element,index,array){
+        return element>10;
+    }
+    document.write('<br />');
+    var filtered = [12,5,6,130,68].filter(isBig);
+    document.write(filtered);
+</script>
+<script>
+    var str = [5,7,4,13,4,56,98];
+    document.write('<br>');
+    document.write(str.indexOf(4));
+    document.write('<br>');
+    document.write(str.lastIndexOf(4));
+    document.write(str.join('+'));
+</script>
+<script>
+    var numbers=[1,4,9];
+    document.write('<br>');
+    document.write('numbers.map(Math.sqrt) : '+numbers.map(Math.sqrt));
+    document.write('<br>');
+</script>
+<script>
+    var numbers = [1,2,3,4];    document.write('<br>');
+
+    document.write(numbers.pop());    document.write('<br>');
+
+    document.write(numbers.pop());    document.write('<br>');
+
+    document.write(numbers.push(5));    document.write('<br>');
+    document.write(numbers.push(6));    document.write('<br>');
+    document.write(numbers);    document.write('<br>');
+</script>
+<script>
+    var numbers=[1,2,3,4];
+    var total = numbers.reduce(function(a,b){return a - b;});
+    document.write(total);
+</script>
+<script>
+    var animals = [
+        {species: 'lion', name: 'King'},
+        {species: 'whale', name: 'Fail'}
+    ];
+
+    for(var i = 0; i < animals.length; i++){
+        (function(i,x){
+            this.print = function(){
+                document.write('<br>#' + i + ' ' + this.species + ': ' + this.name+'<br>');
+                document.write('x = ' + x);
+            }
+            this.print();
+        }).call(animals[i],i,i*2);
+    }
+</script>
+<script>
+    function greet(){
+        var reply = [this.person, this.role].join(' ');
+        document.write(reply);
+    }
+
+    var item = {
+        person: 'Along Chai',
+        role: 'Javascript Developer'
+    };
+
+    greet.call(item);
+</script>
+<script>
+    function Product(name, price) {
+  this.name = name;
+  this.price = price;
+
+  if (price < 0) {
+    throw RangeError('Cannot create product ' +
+                      this.name + ' with a negative price');
+  }
+}
+
+function Food(name, price) {
+  Product.call(this, name, price);
+  this.category = 'food';
+}
+
+function Toy(name, price) {
+  Product.call(this, name, price);
+  this.category = 'toy';
+}
+
+var cheese = new Food('feta', 5);
+var fun = new Toy('robot', 40);
+document.write('<br>');
+document.write(JSON.stringify(cheese));
+document.write('<br>');
+document.write(JSON.stringify(fun));
+</script>
+<script>
+    var total=[1,2,3,4].reduceRight(function(x,y){return x+y;});
+    print(total);
+</script>
+<script>
+    var arr=[1,2,3,4,5].reverse();
+    print("Reversed array is : " + arr);
+</script>
+<script>
+    var arr = [1,2,3];
+    print(arr.shift());
+    print(arr);
+    var result = arr.unshift(5);
+    print(result);
+    print(arr);
+</script>
+<script>
+    var arr = ['orange','mango','banana','sugar','tea'];
+    print('arr.slice(1,2) : ' + arr.slice(1,2));
+    print('arr.slice(1,3) : '+arr.slice(1,3));
+</script>
+<script>
+    function isBigEnough(element,index,array){
+        print('element: ' + element);
+        print('index: ' + index);
+        print('array: ' + array);
+
+        return element > this.comparator;
+    }
+    var val=[1,2,3,4,5,6];
+    var comparator = 5;
+    print('Return value is : ' + val.some(isBigEnough));
+
+</script>
+<script>
+    function desc(a,b){
+         if(a > b) return false;
+         else return true;
+    }
+    var arr = ['orange','mango','banana','sugar','tea'];
+
+    print('original: ' + arr);
+    print('ascend: ' + arr.sort());
+    print('descend: ' + arr.sort(desc));
+    print('toString: ' + arr.toString());
+</script>
+</body>
+</html>

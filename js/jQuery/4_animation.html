@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="jquery.min.js"></script>
+    <script>
+        $(function(){
+            $("#button1").click(function(){
+                $("#button1").animate({
+                    height:'+=350px',
+                    width:'+=150px'
+                })
+            })
+        });
+        $(function(){
+            $("#button2").click(function(){
+                $("#div1").animate({opacity:'0.3', fontSize:'3em'},"slow");
+                $("#button2").animate({height:'+=350px',width:'+=150px',opacity:'0.3', color:'red'},"slow");
+                $("#button2").animate({height:'-=350px',width:'-=150px',opacity:'1'},"slow");
+
+            })
+        });
+    </script>
+</head>
+<body>
+    <div id="div1">
+        hello world!!
+    </div>
+    <button id="button1">Click1</button>
+    <button id="button2">Click2</button>
+</body>
+</html>

@@ -1,0 +1,10 @@
+p.toggle {
+    float: left;
+    border: 2px green solid;
+    width: 40%;
+    margin: 2px;
+    padding: 2px;
+}
+p.cleared {
+    clear: both;
+}

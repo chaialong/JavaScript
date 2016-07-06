@@ -1,0 +1,15 @@
+img {
+border: medium double black;;
+background-color: lightgreay;
+position: fixed;
+}
+#banana {
+z-index: 1;
+top: 15px;
+left:150px;
+}
+#apple {
+z-index: 2;
+top: 25px;
+left:120px;
+}

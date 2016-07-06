@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="jquery.min.js"></script>
+    <script>
+        function print(str){
+            document.write(str+"<br>");
+        };
+        $(function(){
+            $("#button1").click(function(){
+                print($("p").css("background-color"));
+            });
+            $("#button2").click(function(){
+               $("h1,h2,p").css("color","red");
+            });
+            $("#button3").click(function(){
+               $("h1,h2,p").css({"background-color":"black", "color":"white", "font-size":"200%"});
+            });
+        });
+    </script>
+</head>
+<body>
+    <h1>Level one header</h1>
+    <h2>Level two header</h2>
+    <p>Test paragraph..</p>
+    <input type="button" id="button1" value="get css"/>
+    <input type="button" id="button2" value="set one css"/>
+    <input type="button" id="button3" value="set multiple css"/>
+</body>
+</html>

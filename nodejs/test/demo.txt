@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <Access-Control-Allow-Origin="*">
+    <title></title>
+
+</head>
+<body>
+	<h2>jQuery and AJAX is fun!</h2>
+	<p id="p1">This is some text in a paragraph.</p>
+</body>
+</html>
+

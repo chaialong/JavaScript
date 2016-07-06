@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        table {
+            <!--border-collapse: collapse;-->
+            border: red 2px solid;
+            border-collapse: separate;
+            border-spacing: 10px;
+            empty-cells: hide;
+            caption-side: bottom;
+        }
+        th,td {
+            padding: 2px;
+        }
+        thead, tbody > tr > th{
+            background-color: lightgrey;
+        }
+    </style>
+</head>
+<body>
+    <table border="1">
+        <caption>Results of the 2011 Fruit Survey</caption>
+        <thead>
+            <tr>
+                <th>Rank</th><th>Name</th><th>Color</th>
+                <th colspan="2">Size & Votes</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th>Favourite:</th><td>Apples</td><td>Green</td>
+                <td>Medium</td><td>500</td>
+            </tr>
+            <tr>
+                <th>2nd Favorite:</th><td>Oranges</td><td>Orange</td>
+                <td></td><td></td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <th colspan="5">&copy; 2011 Adam Freeman Fruit Data Enterprises</th>
+            </tr>
+        </tfoot>
+    </table>
+</body>
+</html>

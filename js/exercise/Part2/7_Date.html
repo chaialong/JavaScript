@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+    <script>
+        function print(str){
+            document.write('<br>' + str);
+        }
+    </script>
+    <script>
+        var dt = new Date('March 28, 2016 17:05:01');
+        var now = new Date();
+        print(now);
+        print('getDate(): ' + now.getDate());
+        print('getDay(): ' + now.getDay());
+        print('getFullYear(): ' + now.getFullYear());
+        print('getHours(): ' + now.getHours());
+        print('getHours(): ' + now.getHours());
+        print('getMinutes(): ' + now.getMinutes());
+        print('getSeconds(): ' + now.getSeconds());
+        print('getMilliseconds(): ' + now.getMilliseconds());
+        print('getMonth(): ' + now.getMonth());
+        print('getTime(): ' + now.getTime());
+        print('getTimezoneOffset(): ' + now.getTimezoneOffset());
+        print('getUTCDate(): ' + now.getUTCDate());
+        print('getUTCFullYear(): ' + now.getUTCFullYear());
+        print('getUTCMonth(): ' + now.getUTCMonth());
+        print('getUTCDay(): ' + now.getUTCDay());
+        print('getUTCHours(): ' + now.getUTCHours());
+        print('getUTCMinutes(): ' + now.getUTCMinutes());
+        print('getUTCSeconds(): ' + now.getUTCSeconds());
+        print('getUTCMilliseconds(): ' + now.getUTCMilliseconds());
+    </script>
+    <script>
+        var now = new Date();
+        now.setFullYear(2010,11,31);
+        print('setFullYear(): ' + now);
+        now.setHours(23,59,49);
+        print('setHours(): ' + now);
+        now.setTime(5000000);
+        print('setTime(): ' + now);
+        now = new Date();
+        now.setUTCDate(33);
+        print('setUTCDate(33): ' + now);
+        now = new Date();
+        now.setUTCDate(-1);
+        print('setUTCDate(-1) ' +  now);
+        now.setUTCFullYear(2001);
+        print('setUTCFullYear(2001): ' + now);
+        now.setUTCMonth(0);
+        print('setUTCMonth(0): ' + now);
+        now.setUTCDate(1);
+        print('setUTCDay(1): ' + now);
+        now = new Date();
+        now.setUTCHours(11,20,29);
+        print('setUTCHours(11,20,29): ' + now);
+        now = new Date();
+        print('toDateString() : ' + now.toDateString());
+        print('toUTCString() : ' + now.toUTCString());
+        print('toLocaleDateString(): ' + now.toLocaleDateString());
+        print('toLocaleTimeString(): ' + now.toLocaleTimeString());
+        print('toLocaleString(): ' + now.toLocaleString());
+        var now = new Date();
+        print('toString(): ' + now.toString());
+        print('toTimeString(): ' + now.toTimeString());
+        print('toUTCString(): ' + now.toUTCString());
+        print('valueOf(): ' + now.valueOf());
+        print('Date.parse(): ' + Date.parse(now));
+        print('Date.UTC(): ' + Date.UTC(2016,3,28));
+    </script>
+
+</body>
+</html>

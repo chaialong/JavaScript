@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script>
+    var add = (function () {
+    var counter = 0;
+    return function () {return counter += 1;}
+})();
+
+    document.write(add());
+    document.write(add());
+    document.write(add());
+
+
+    </script>
+
+    <script>
+           var gLogNumber, gIncreaseNumber, gSetNumber;
+           function setupSomeGlobals() {
+               // Local variable that ends up within closure
+               var num = 666;
+               // Store some references to functions as global variables
+               gLogNumber = function() { console.log(num); }
+               gIncreaseNumber = function() { num++; }
+               gSetNumber = function(x) { num = x; }
+           }
+
+            setupSomeGlobals();
+            gIncreaseNumber();
+            gLogNumber(); // 667
+            gSetNumber(5);
+            gLogNumber(); // 5
+
+            var oldLog = gLogNumber;
+    </script>
+    <script>
+            function buildList(list) {
+    var result = [];
+    for (var i = 0; i < list.length; i++) {
+        var item = 'item' + i;
+        result.push( function() {console.log(item + ' ' + list[i])} );
+    }
+    return result;
+}
+
+function testList() {
+    var fnlist = buildList([1,2,3]);
+    // Using j only to help prevent confusion -- could use i.
+    for (var j = 0; j < fnlist.length; j++) {
+        fnlist[j]();
+    }
+}
+    </script>
+    <script>
+        function sayAlice() {
+    var say = function() { console.log(alice); }
+    // Local variable that ends up within closure
+    var alice = 'Hello Alice';
+    return say;
+}
+sayAlice()();
+    </script>
+</head>
+<body>
+       <input type="button" value="test" onclick="testList();"/>
+</body>
+</html>

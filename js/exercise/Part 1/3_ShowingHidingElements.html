@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script type="text/javascript" src="jquery.min.js" ></script>
+    <script>
+        $(document).ready(function(){
+            $("#myDiv").fadeTo(2000,0.5,function(){
+               $("#myDiv").append("<p>This is a new line</p>");
+            });
+         });
+         function Sayhello(){
+              $("#myDiv").html("<p>!!!hello world</p>");
+         };
+    </script>
+    <style>
+        #myDiv:hover{
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+     <a id="myDiv">Hello world</a>
+<button onclick="Sayhello();">Say hello</button>
+</body>
+</html>

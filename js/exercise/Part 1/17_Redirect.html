@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+
+
+</head>
+<body>
+    <p>
+        Click the following button, you will be rediredted to home page.
+    </p>
+    <p id="output">test</p>
+    <input type="button" value="reidrect me" onclick="Redirect();"/>
+
+</body>
+<script>
+        function WriteToDiv(content){
+              var div = document.getElementById("output");
+              if(div.innerHTML != null){
+                   div.innerHTML = div.innerHTML + "<br />" + content;
+              }
+              else{
+                  div.innerHTML = "<br />" + content;
+              }
+
+        }
+    </script>
+<script>
+        function Redirect(){
+            window.location="http://www.baidu.com";
+        }
+
+        WriteToDiv("You will be redirected in 5 seconds;");
+
+
+    </script>
+<script>
+        var browsername=navigator.appName;
+        if(browsername=="Netscape"){
+            WriteToDiv("The browser is Netscape");
+        }
+        if(browsername=="Chrome"){
+            WriteToDiv("The browser is Chrome");
+        }
+        if(browsername=="Microsoft Internet Explorer"){
+            WriteToDiv("The browser is IE");
+        }
+        else{
+            WriteToDiv("The browser is unknown: "+ browsername)
+        }
+    </script>
+</html>

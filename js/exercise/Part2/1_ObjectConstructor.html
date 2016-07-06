@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script>
+        var book = new Object();
+        book.subject = "Perl";
+        book.author = "Mohtashim";
+    </script>
+    <script>
+        function book(title, author){
+            this.title = title;
+            this.author = author;
+            this.price = 0;
+            this.addprice = addprice;
+        }
+        function addprice(amount){
+            with(this){
+                price = amount;
+            }
+        }
+    </script>
+</head>
+<body>
+    <!--<script>-->
+        <!--document.write("Book name is : " + book.subject + "<br />");-->
+        <!--document.write("Book author is : " + book.author + "<br />");-->
+    <!--</script>-->
+    <script>
+        var mybook = new book("Javascript", "Along");
+        mybook.addprice(100);
+        document.write("Book name is : " + mybook.title + "<br />");
+        document.write("Book author is : " + mybook.author + "<br />");
+        document.write("Book price is : " + mybook.price + "<br />");
+
+    </script>
+</body>
+</html>

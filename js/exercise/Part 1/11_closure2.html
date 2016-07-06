@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script>
+        function foo(x) {
+  var tmp = 3;
+
+  return function (y) {
+    console.log(x + y + tmp);
+    x.memb = x.memb ? x.memb + 1 : 1;
+    console.log(x.memb);
+  }
+}
+
+var age = new Number(2);
+var bar = foo(age); // bar is now a closure referencing age.
+bar(10);
+bar(10);
+    </script>
+</head>
+<body>
+
+</body>
+</html>

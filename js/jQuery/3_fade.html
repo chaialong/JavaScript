@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="jquery.min.js"></script>
+    <script>
+        $(function(){
+            $("#fadeToggle").click(function(){
+                $("#div1").fadeToggle();
+                $("#div2").fadeToggle("slow");
+                $("#div3").fadeToggle(3000);
+            })
+        });
+        $(function(){
+            $("#fadeTo").click(function(){
+                $("#div1").fadeTo("slow",0.15);
+                $("#div2").fadeTo("slow", 0.4);
+                $("#div3").fadeTo(3000, 0.7);
+            })
+        });
+        $(function(){
+            $("#slideUp").click(function(){
+                $("#div1").slideToggle();
+            });
+        });
+    </script>
+</head>
+<body>
+    <input type="button" value="fadeToggle" id="fadeToggle"/>
+    <input type="button" value="fadeTo" id="fadeTo"/>
+    <input type="button" value="slideUp" id="slideUp"/>
+    <div id="div1">Div1...</div>
+    <div id="div2">Div2...</div>
+    <div id="div3">Div3...</div>
+</body>
+</html>

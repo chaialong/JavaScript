@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+    <script>
+        function print(str){
+            document.write(str+'<br>');
+        }
+    </script>
+    <script>
+        var re = new RegExp('string');
+        print('re.constructor: ' + re.constructor);
+
+        var str = "Javascript is a very interesting script language";
+        var re = /script/g;
+        re.test(str);
+        print("Current index: " + re.lastIndex);
+        re.test(str);
+        print("Current index: " + re.lastIndex);
+        print('Source: ' + re.source);
+        var result = re.exec(str);
+        print('re.exec(str) : ' + re.exec(str));
+        re = /pushing/g;
+        print('re.exec(str) : ' + re.exec(str));
+        re = /script/g;
+        print('re.test(str) : ' + re.test(str));
+        re = /pushing/g;
+        print('re.test(str) : ' + re.test(str));
+        print('re.toString(): ' + re.toString());
+        re = new RegExp('script','g');
+        print('re.toString(): ' + re.toString());
+
+    </script>
+
+</body>
+</html>

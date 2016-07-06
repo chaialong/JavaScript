@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="./js/jquery.min.js"></script>
+    <script>
+        $(function () {
+            $("button").each(function (index, value) {
+                value.onclick = function (e) {
+                    $("#banana, #apple").css("webkitAnimationPlayState", e.target.innerText);
+                }
+            });
+        });
+    </script>
+    <style>
+        p {
+            padding: 5px;
+            border: medium double black;
+            background-color: lightgray;
+            color: green;
+            font-family: sans-serif;
+        }
+
+        span {
+            font-size: large;
+            border: medium solid black;
+        }
+
+        #banana, #apple {
+            -webkit-animation-duration: 2500ms;
+            -webkit-animation-iteration-count: infinite;
+            -webkit-animation-direction: alternate;
+            -webkit-animation-timing-function: linear;
+            -webkit-animation-name: 'ColorSwap';
+            -moz-transform: rotate(-45deg) scaleX(1.2);
+        }
+
+        <!--
+        #apple {
+        --> <!-- -webkit-animation-duration: 500 ms;
+        --> <!-- -webkit-animation-iteration-count: infinite;
+        --> <!-- -webkit-animation-direction: normal;
+        --> <!-- -webkit-animation-timing-function: ease-in-out;
+        --> <!-- -webkit-animation-name: 'ColorSwap';
+        --> <!--
+        }
+
+        -->
+        @-webkit-keyframes ColorSwap {
+            to {
+                border: medium solid white;
+                background-color: green;
+            }
+        }
+
+        #banana:hover {
+            transition-duration: 1.5s;
+            transform: rotate(360deg);
+        }
+    </style>
+</head>
+<body>
+<p>
+    There are lots of different kinds of fruit - there are over 500
+    varieties of <span id="banana">banana</span> alone. By the time we add the
+    countless types of <span id="apple">apples</span>, oranges, and other
+    well-known fruit, we are faced with thousands of choices.
+</p>
+<p>
+    <button>Running</button>
+    <button>Paused</button>
+</p>
+</body>
+</html>

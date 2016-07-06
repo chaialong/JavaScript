@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script>
+        function book(title, author){
+            this.title = title;
+            this.author = author;
+        }
+    </script>
+</head>
+<body>
+    <script>
+        var mybook = new book("perl", "along");
+        book.prototype.price = 0;
+        mybook.price = 100;
+        book.prototype.print = function(text){
+            document.write(text);
+            document.write("<br />");
+        }
+        mybook.print("hello world");
+        document.write("Book name is : " + mybook.title + "<br />");
+        document.write("Book author is : " + mybook.author + "<br />");
+        document.write("Book price is : " + mybook.price + "<br />");
+    </script>
+
+</body>
+</html>
